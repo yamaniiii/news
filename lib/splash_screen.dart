@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:news/home/home.dart';
+import 'package:news/layout/home/home_layout.dart';
 
 class SplashScreen extends StatelessWidget {
   static const String routeName = "Splash";
@@ -10,7 +10,7 @@ class SplashScreen extends StatelessWidget {
 
     Future.delayed(Duration(seconds:2),
         (){
-      Navigator.pushReplacementNamed(context, Home.routeName);
+      Navigator.pushReplacementNamed(context, HomeLayout.routeName);
         }
     );
 
