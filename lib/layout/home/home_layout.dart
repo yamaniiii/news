@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:news/models/category.dart';
 import 'package:news/screens/articles/articles_screen.dart';
 import 'package:news/screens/categories_screen/categories_screen.dart';
+import 'package:news/screens/home_news_fragment/home_news_fragment.dart';
 import 'package:news/screens/settings/settings_screens.dart';
 import 'package:news/shared/style/components/category_item.dart';
 
@@ -92,7 +93,8 @@ bool selectedSettings = false;
           ),
         ],
       ),
-      body: selectedCategory==null? selectedSettings?SettingsScreen():CategoriesScreen( SelectCategory,):ArticlesScreen(),
+      body: selectedCategory==null? selectedSettings?SettingsScreen() :
+                                      CategoriesScreen( SelectCategory,):HomeNewsFragment(),
       ),
     );
   }

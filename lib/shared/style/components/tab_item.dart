@@ -1,11 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:news/api/model/sources_response/Source.dart';
 
 class TabItem extends StatelessWidget {
 
   bool selected;
-  String sourceTitle;
-  TabItem(this.selected , this.sourceTitle);
+  Source? source;
+  TabItem(this.selected , this.source);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,7 @@ class TabItem extends StatelessWidget {
         border: Border.all(color: Theme.of(context).primaryColor,width: 2)
       ),
       child: Text(
-        sourceTitle,
+        source?.name ?? "",
         style: Theme.of(context).textTheme.titleSmall?.copyWith(
           color: selected?Colors.white:Theme.of(context).primaryColor,
         ),
